@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>counter</title>
+</head>
+<body>
+	<script>
+		function outer(){
+			let count = 0;
+			return function inner(){
+				return ++count;
+			}
+		}
+		counter = outer();
+		console.log(counter());
+		console.log(counter());
+		console.log(counter());
+	</script>
+</body>
+</html>
